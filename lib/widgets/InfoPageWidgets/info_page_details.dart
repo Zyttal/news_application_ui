@@ -12,7 +12,7 @@ class InfoPageDetails extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(25)),
       child: Padding(
-        padding: EdgeInsets.all(25),
+        padding: EdgeInsets.all(30),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(
             "Unravel mysteries of the Maldives",
@@ -51,7 +51,7 @@ class InfoPageDetails extends StatelessWidget {
           Text(
             "Just say anything, George, say what ever's natural, the first thing that comes to your mind. Take that you mutated son-of-a-bitch. My pine, why you. You space bastard, you killed a pine. You do? Yeah, it's 8:00. Hey, McFly, I thought I told you never",
             style: TextStyle(
-                fontSize: 16, height: 1.2, fontWeight: FontWeight.w500),
+                fontSize: 16, height: 1.5, fontWeight: FontWeight.w600),
           ),
         ]),
       ),
