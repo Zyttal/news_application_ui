@@ -11,9 +11,9 @@ class ProfileDetails extends StatelessWidget {
       width: 315,
       height: 95,
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 25, 32, 45),
+          color: const Color.fromARGB(255, 25, 32, 45),
           borderRadius: BorderRadius.circular(25)),
-      child: Center(
+      child: const Center(
         child: IntrinsicHeight(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,

@@ -23,58 +23,54 @@ class VerticalListItem extends StatelessWidget {
               color: Colors.white, borderRadius: BorderRadius.circular(20)),
           child: Image.network(imgURL),
         ),
-        SizedBox(
+        const SizedBox(
           width: 20,
         ),
-        Container(
+        SizedBox(
           width: 200,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 category,
-                style: TextStyle(fontSize: 10),
+                style: const TextStyle(fontSize: 10),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Text(
                 header,
-                style: TextStyle(fontSize: 14),
+                style: const TextStyle(fontSize: 14),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    child: Row(children: [
-                      Icon(Icons.calendar_month),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        date,
-                        style: TextStyle(fontSize: 11),
-                      )
-                    ]),
-                  ),
-                  Container(
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(Icons.timer_rounded),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          Text(time,
-                              style: TextStyle(
-                                fontSize: 11,
-                              ))
-                        ]),
-                  )
+                  Row(children: [
+                    const Icon(Icons.calendar_month),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    Text(
+                      date,
+                      style: const TextStyle(fontSize: 11),
+                    )
+                  ]),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const Icon(Icons.timer_rounded),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Text(time,
+                            style: const TextStyle(
+                              fontSize: 11,
+                            ))
+                      ])
                 ],
               )
             ],

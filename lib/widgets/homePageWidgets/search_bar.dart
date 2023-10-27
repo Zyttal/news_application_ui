@@ -14,7 +14,7 @@ class HomeSearchBar extends StatelessWidget {
           height: 49,
           decoration: BoxDecoration(
               color: Colors.white, borderRadius: BorderRadius.circular(20)),
-          child: TextField(
+          child: const TextField(
             decoration: InputDecoration(
                 hintText: "Search article...",
                 border: InputBorder.none,
@@ -28,9 +28,9 @@ class HomeSearchBar extends StatelessWidget {
               height: 49,
               width: 47,
               decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 84, 116, 253),
+                  color: const Color.fromARGB(255, 84, 116, 253),
                   borderRadius: BorderRadius.circular(10)),
-              child: Icon(
+              child: const Icon(
                 Icons.search,
                 color: Colors.white,
                 weight: 1,

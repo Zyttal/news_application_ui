@@ -11,25 +11,25 @@ class BottomNavBar extends StatelessWidget {
       height: 80,
       child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: Color.fromARGB(255, 84, 116, 253),
+          selectedItemColor: const Color.fromARGB(255, 84, 116, 253),
           unselectedItemColor: Colors.grey,
           selectedFontSize: 0,
           unselectedFontSize: 0,
-          items: [
+          items: const [
             BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.home)),
+              icon: SizedBox(width: 40, child: Icon(Icons.home)),
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.bookmark)),
+              icon: SizedBox(width: 40, child: Icon(Icons.bookmark)),
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.notifications)),
+              icon: SizedBox(width: 40, child: Icon(Icons.notifications)),
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.person)),
+              icon: SizedBox(width: 40, child: Icon(Icons.person)),
               label: '',
             )
           ]),

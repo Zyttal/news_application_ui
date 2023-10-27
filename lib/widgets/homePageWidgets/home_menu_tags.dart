@@ -7,7 +7,7 @@ class HomeMenuTags extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTextStyle(
+    return const DefaultTextStyle(
       style: TextStyle(fontSize: 12, color: Colors.grey),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

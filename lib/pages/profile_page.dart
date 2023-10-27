@@ -6,10 +6,12 @@ import '../widgets/ProfilePageWidgets/profile_page_details.dart';
 import '../widgets/ProfilePageWidgets/vertical_list_item.dart';
 
 class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 252, 252, 252),
+      backgroundColor: const Color.fromARGB(255, 252, 252, 252),
       body: GestureDetector(
         onHorizontalDragEnd: (details) {
           if (details.primaryVelocity! > 0) {
@@ -20,27 +22,27 @@ class ProfilePage extends StatelessWidget {
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(
-              padding: EdgeInsets.all(25),
-              child: ProfilePageDetails(),
+              padding: const EdgeInsets.all(25),
+              child: const ProfilePageDetails(),
             ),
             Container(
-              padding: EdgeInsets.only(left: 25, right: 25),
-              child: Text(
+              padding: const EdgeInsets.only(left: 25, right: 25),
+              child: const Text(
                 "Every piece of Chocolate I ever atee is getting back at me.. desserts are very revengefull..",
                 style: TextStyle(color: Colors.grey, fontSize: 12),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 35,
             ),
-            Center(
+            const Center(
               child: ProfileDetails(),
             ),
-            SizedBox(
+            const SizedBox(
               height: 35,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 25, right: 25),
+            const Padding(
+              padding: EdgeInsets.only(left: 25, right: 25),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -57,12 +59,12 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Container(
-              padding: EdgeInsets.only(left: 25),
-              child: Column(children: [
+              padding: const EdgeInsets.only(left: 25),
+              child: const Column(children: [
                 VerticalListItem(
                   imgURL:
                       'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290594/News_Application_UI_Assets/Vector-10_xhxoyt.png',
@@ -86,22 +88,23 @@ class ProfilePage extends StatelessWidget {
                 ),
               ]),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Container(
-              padding: EdgeInsets.only(left: 25),
-              child: Text(
+              padding: const EdgeInsets.only(left: 25),
+              child: const Text(
                 "Popular From Elly",
                 style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
-            Container(
+            SizedBox(
               height: 143,
-              child: ListView(scrollDirection: Axis.horizontal, children: [
+              child:
+                  ListView(scrollDirection: Axis.horizontal, children: const [
                 HorizontalListCard3(
                   imgURL:
                       'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290594/News_Application_UI_Assets/Vector-12_u1uysr.png',
@@ -123,7 +126,7 @@ class ProfilePage extends StatelessWidget {
                 )
               ]),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             )
           ]),

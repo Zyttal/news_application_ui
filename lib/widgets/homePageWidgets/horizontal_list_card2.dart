@@ -13,12 +13,12 @@ class HorizontalListCard2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 25),
+      margin: const EdgeInsets.only(left: 25),
       width: 208,
       height: 88,
       decoration: BoxDecoration(
           color: Colors.white,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               color: Color.fromARGB(15, 25, 32, 45),
               offset: Offset(0, 3),
@@ -36,7 +36,7 @@ class HorizontalListCard2 extends StatelessWidget {
               Stack(
                 children: [
                   Image.network(imgURL),
-                  Positioned(
+                  const Positioned(
                       left: 0,
                       right: 0,
                       top: 0,
@@ -47,39 +47,40 @@ class HorizontalListCard2 extends StatelessWidget {
                       ))
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
+                  SizedBox(
                     width: 108,
                     child: Text(
                       headerString,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 13,
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.visibility,
                         size: 12,
                         color: Colors.grey,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       Text(
                         viewCount,
-                        style: TextStyle(fontSize: 12, color: Colors.grey),
+                        style:
+                            const TextStyle(fontSize: 12, color: Colors.grey),
                       )
                     ],
                   ),

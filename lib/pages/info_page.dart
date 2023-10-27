@@ -1,10 +1,11 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:news_application_ui/widgets/bottom_nav_bar.dart';
 
 import '../widgets/InfoPageWidgets/info_page_details.dart';
 
 class InfoPage extends StatelessWidget {
-  InfoPage({super.key});
+  const InfoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class InfoPage extends StatelessWidget {
               children: [
                 Image.network(
                     'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290595/News_Application_UI_Assets/Rectangle_nwqvpg.png'),
-                Positioned(
+                const Positioned(
                   top: 350,
                   child: InfoPageDetails(),
                 ),
@@ -44,7 +45,7 @@ class InfoPage extends StatelessWidget {
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.white),
                             borderRadius: BorderRadius.circular(20)),
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back_ios_new,
                           color: Colors.white,
                           size: 20,
@@ -60,7 +61,7 @@ class InfoPage extends StatelessWidget {
                       decoration: BoxDecoration(
                           border: Border.all(color: Colors.white),
                           borderRadius: BorderRadius.circular(20)),
-                      child: Icon(
+                      child: const Icon(
                         Icons.bookmark,
                         color: Colors.white,
                         size: 20,
@@ -71,7 +72,7 @@ class InfoPage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: const BottomNavBar(),
     );
   }
 }

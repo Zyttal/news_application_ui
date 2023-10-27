@@ -1,14 +1,18 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomeProfile extends StatelessWidget {
+  const HomeProfile({super.key});
+
   @override
   Widget build(BuildContext context) {
     return DefaultTextStyle(
       style: GoogleFonts.roboto(),
-      child: Row(
+      child: const Row(
         children: [
-          Container(
+          SizedBox(
             width: 49,
             height: 49,
             child: Image(

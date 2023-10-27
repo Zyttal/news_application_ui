@@ -15,7 +15,7 @@ class ProfilePageDetails extends StatelessWidget {
           'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290593/News_Application_UI_Assets/Vector-9_n0sajt.png',
           height: 70,
         ),
-        Column(
+        const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -31,16 +31,16 @@ class ProfilePageDetails extends StatelessWidget {
             )
           ],
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Container(
           width: 109,
           height: 42,
           decoration: BoxDecoration(
-              color: Color.fromARGB(255, 84, 116, 253),
+              color: const Color.fromARGB(255, 84, 116, 253),
               borderRadius: BorderRadius.circular(20)),
-          child: Center(
+          child: const Center(
               child: Text(
             "Following",
             style: TextStyle(color: Colors.white, fontSize: 12),

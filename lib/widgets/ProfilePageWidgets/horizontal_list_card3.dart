@@ -11,7 +11,7 @@ class HorizontalListCard3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 25),
+      padding: const EdgeInsets.only(left: 25),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
       child: Image.network(imgURL),
     );
