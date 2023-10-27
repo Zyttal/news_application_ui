@@ -5,7 +5,14 @@ import 'package:news_application_ui/pages/profilePage.dart';
 class HorizontalListCard extends StatelessWidget {
   const HorizontalListCard({
     super.key,
+    required this.imageURL,
+    required this.headerString,
+    required this.profilePicURL,
+    required this.profileName,
+    required this.datePosted,
   });
+
+  final String imageURL, headerString, profilePicURL, profileName, datePosted;
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +34,12 @@ class HorizontalListCard extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.all(12),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Image.network(
-              'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290593/News_Application_UI_Assets/Vector-3_ylujrd.png'),
+          Image.network(imageURL),
           SizedBox(
             height: 20,
           ),
           Text(
-            "Feel the Thrill on the only \nsurf simulator in Maldives 2022",
+            headerString,
             style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
           ),
           SizedBox(
@@ -50,14 +56,13 @@ class HorizontalListCard extends StatelessWidget {
                           MaterialPageRoute(
                               builder: (context) => ProfilePage()));
                     },
-                    child: Image.network(
-                        'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290593/News_Application_UI_Assets/Vector-4_vfsxmo.png'),
+                    child: Image.network(profilePicURL),
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Sang Dong-Min",
+                        profileName,
                         style: TextStyle(
                             fontSize: 12, fontWeight: FontWeight.w600),
                       ),
@@ -65,7 +70,7 @@ class HorizontalListCard extends StatelessWidget {
                         height: 5,
                       ),
                       Text(
-                        "Sep 9, 2022",
+                        datePosted,
                         style: TextStyle(fontSize: 12, color: Colors.grey),
                       )
                     ],

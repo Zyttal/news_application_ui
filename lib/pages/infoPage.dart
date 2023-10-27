@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_application_ui/widgets/bottom_nav_bar.dart';
 
 import '../widgets/InfoPageWidgets/info_page_details.dart';
 
@@ -70,30 +71,7 @@ class InfoPage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: Color.fromARGB(255, 84, 116, 253),
-          unselectedItemColor: Colors.grey,
-          selectedFontSize: 0,
-          unselectedFontSize: 0,
-          items: [
-            BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.home)),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.bookmark)),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.notifications)),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.person)),
-              label: '',
-            )
-          ]),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }

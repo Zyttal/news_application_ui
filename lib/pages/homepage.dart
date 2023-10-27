@@ -3,6 +3,7 @@ import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:news_application_ui/widgets/homePageWidgets/homeProfile.dart';
 
+import '../widgets/bottom_nav_bar.dart';
 import '../widgets/homePageWidgets/home_menu_tags.dart';
 import '../widgets/homePageWidgets/horizontal_list_card.dart';
 import '../widgets/homePageWidgets/horizontal_list_card2.dart';
@@ -39,9 +40,49 @@ class Homepage extends StatelessWidget {
                 Container(
                   height: 305,
                   child: ListView(scrollDirection: Axis.horizontal, children: [
-                    HorizontalListCard(),
-                    HorizontalListCard(),
-                    HorizontalListCard(),
+                    HorizontalListCard(
+                      imageURL:
+                          'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290593/News_Application_UI_Assets/Vector-3_ylujrd.png',
+                      headerString:
+                          "Feel the Thrill on the only \nsurf simulator in Maldives 2022",
+                      profilePicURL:
+                          'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290593/News_Application_UI_Assets/Vector-4_vfsxmo.png',
+                      profileName: "Sang Dong-Min",
+                      datePosted: "Sep 9, 2022",
+                    ),
+                    HorizontalListCard(
+                      imageURL:
+                          'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290594/News_Application_UI_Assets/Vector-5_xyqsly.png',
+                      headerString:
+                          "Hong Kong wins over Wall\nStreet CEOs after lifting strict",
+                      profilePicURL:
+                          'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290594/News_Application_UI_Assets/Vector-6_mxagzy.png',
+                      profileName: "Pan Bong",
+                      datePosted: "Jan 3, 2022",
+                    ),
+                    HorizontalListCard(
+                      imageURL:
+                          'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290593/News_Application_UI_Assets/Vector-3_ylujrd.png',
+                      headerString:
+                          "Feel the Thrill on the only \nsurf simulator in Maldives 2022",
+                      profilePicURL:
+                          'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290593/News_Application_UI_Assets/Vector-4_vfsxmo.png',
+                      profileName: "Sang Dong-Min",
+                      datePosted: "Sep 9, 2022",
+                    ),
+                    HorizontalListCard(
+                      imageURL:
+                          'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290594/News_Application_UI_Assets/Vector-5_xyqsly.png',
+                      headerString:
+                          "Hong Kong wins over Wall\nStreet CEOs after lifting strict",
+                      profilePicURL:
+                          'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290594/News_Application_UI_Assets/Vector-6_mxagzy.png',
+                      profileName: "Pan Bong",
+                      datePosted: "Jan 3, 2022",
+                    ),
+                    SizedBox(
+                      width: 25,
+                    )
                   ]),
                 ),
                 SizedBox(
@@ -58,9 +99,33 @@ class Homepage extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: [
-                      HorizontalListCard2(),
-                      HorizontalListCard2(),
-                      HorizontalListCard2()
+                      HorizontalListCard2(
+                        imgURL:
+                            'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290593/News_Application_UI_Assets/Vector-1_om8bgt.png',
+                        headerString: "Top Trending Islands in 2022",
+                        viewCount: "40,999",
+                      ),
+                      HorizontalListCard2(
+                        imgURL:
+                            'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290593/News_Application_UI_Assets/Vector-2_fyij6l.png',
+                        headerString: "China Trading",
+                        viewCount: "40,999",
+                      ),
+                      HorizontalListCard2(
+                        imgURL:
+                            'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290593/News_Application_UI_Assets/Vector-1_om8bgt.png',
+                        headerString: "Top Trending Islands in 2022",
+                        viewCount: "40,999",
+                      ),
+                      HorizontalListCard2(
+                        imgURL:
+                            'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290593/News_Application_UI_Assets/Vector-2_fyij6l.png',
+                        headerString: "China Trading",
+                        viewCount: "40,999",
+                      ),
+                      SizedBox(
+                        width: 25,
+                      )
                     ],
                   ),
                 ),
@@ -72,30 +137,7 @@ class Homepage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: Color.fromARGB(255, 84, 116, 253),
-          unselectedItemColor: Colors.grey,
-          selectedFontSize: 0,
-          unselectedFontSize: 0,
-          items: [
-            BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.home)),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.bookmark)),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.notifications)),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.person)),
-              label: '',
-            )
-          ]),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }

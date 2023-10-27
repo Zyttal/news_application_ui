@@ -3,7 +3,12 @@ import 'package:flutter/material.dart';
 class HorizontalListCard2 extends StatelessWidget {
   const HorizontalListCard2({
     super.key,
+    required this.imgURL,
+    required this.headerString,
+    required this.viewCount,
   });
+
+  final String imgURL, headerString, viewCount;
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +35,7 @@ class HorizontalListCard2 extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Image.network(
-                      'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290593/News_Application_UI_Assets/Vector-1_om8bgt.png'),
+                  Image.network(imgURL),
                   Positioned(
                       left: 0,
                       right: 0,
@@ -53,7 +57,7 @@ class HorizontalListCard2 extends StatelessWidget {
                   Container(
                     width: 108,
                     child: Text(
-                      "Top Trending Islands in 2022",
+                      headerString,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 13,
@@ -74,7 +78,7 @@ class HorizontalListCard2 extends StatelessWidget {
                         width: 5,
                       ),
                       Text(
-                        "40,999",
+                        viewCount,
                         style: TextStyle(fontSize: 12, color: Colors.grey),
                       )
                     ],

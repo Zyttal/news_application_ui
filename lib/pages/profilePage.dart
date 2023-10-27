@@ -49,7 +49,11 @@ class ProfilePage extends StatelessWidget {
                     "Elly's Post",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  Text("View All")
+                  Text(
+                    "View All",
+                    style: TextStyle(
+                        fontSize: 12, color: Color.fromARGB(255, 84, 116, 253)),
+                  )
                 ],
               ),
             ),
@@ -59,8 +63,27 @@ class ProfilePage extends StatelessWidget {
             Container(
               padding: EdgeInsets.only(left: 25),
               child: Column(children: [
-                VerticalListItem(),
-                VerticalListItem(),
+                VerticalListItem(
+                  imgURL:
+                      'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290594/News_Application_UI_Assets/Vector-10_xhxoyt.png',
+                  category: "News: Politics",
+                  header:
+                      "Iran's raging protests\nFifth Iranian paramilitary me...",
+                  date: "16th May",
+                  time: "09:32 pm",
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                VerticalListItem(
+                  imgURL:
+                      'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290594/News_Application_UI_Assets/Vector-11_gmmwtk.png',
+                  category: "News: Science",
+                  header:
+                      "Putin to host ceremony\nannexxing occupied Ukrainia...",
+                  date: "11th May",
+                  time: "10:15 am",
+                ),
               ]),
             ),
             SizedBox(
@@ -79,9 +102,25 @@ class ProfilePage extends StatelessWidget {
             Container(
               height: 143,
               child: ListView(scrollDirection: Axis.horizontal, children: [
-                HorizontalListCard3(),
-                HorizontalListCard3(),
-                HorizontalListCard3()
+                HorizontalListCard3(
+                  imgURL:
+                      'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290594/News_Application_UI_Assets/Vector-12_u1uysr.png',
+                ),
+                HorizontalListCard3(
+                  imgURL:
+                      'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290593/News_Application_UI_Assets/Vector-8_nbuumk.png',
+                ),
+                HorizontalListCard3(
+                  imgURL:
+                      'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290594/News_Application_UI_Assets/Vector-12_u1uysr.png',
+                ),
+                HorizontalListCard3(
+                  imgURL:
+                      'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290593/News_Application_UI_Assets/Vector-8_nbuumk.png',
+                ),
+                SizedBox(
+                  width: 25,
+                )
               ]),
             ),
             SizedBox(
@@ -90,30 +129,6 @@ class ProfilePage extends StatelessWidget {
           ]),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: Color.fromARGB(255, 84, 116, 253),
-          unselectedItemColor: Colors.grey,
-          selectedFontSize: 0,
-          unselectedFontSize: 0,
-          items: [
-            BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.home)),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.bookmark)),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.notifications)),
-              label: '',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(width: 40, child: Icon(Icons.person)),
-              label: '',
-            )
-          ]),
     );
   }
 }

@@ -3,7 +3,14 @@ import 'package:flutter/material.dart';
 class VerticalListItem extends StatelessWidget {
   const VerticalListItem({
     super.key,
+    required this.imgURL,
+    required this.category,
+    required this.header,
+    required this.date,
+    required this.time,
   });
+
+  final String imgURL, category, header, date, time;
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +21,7 @@ class VerticalListItem extends StatelessWidget {
           width: 100,
           decoration: BoxDecoration(
               color: Colors.white, borderRadius: BorderRadius.circular(20)),
-          child: Image.network(
-              'https://res.cloudinary.com/dbwwffypj/image/upload/v1698290594/News_Application_UI_Assets/Vector-10_xhxoyt.png'),
+          child: Image.network(imgURL),
         ),
         SizedBox(
           width: 20,
@@ -26,14 +32,14 @@ class VerticalListItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "News: Politics",
+                category,
                 style: TextStyle(fontSize: 10),
               ),
               SizedBox(
                 height: 10,
               ),
               Text(
-                "Iran's raging protests\nFifth Iranian paramilitary me...",
+                header,
                 style: TextStyle(fontSize: 14),
               ),
               SizedBox(
@@ -49,7 +55,7 @@ class VerticalListItem extends StatelessWidget {
                         width: 5,
                       ),
                       Text(
-                        "16th May",
+                        date,
                         style: TextStyle(fontSize: 11),
                       )
                     ]),
@@ -63,7 +69,7 @@ class VerticalListItem extends StatelessWidget {
                           SizedBox(
                             width: 5,
                           ),
-                          Text("09:32 pm",
+                          Text(time,
                               style: TextStyle(
                                 fontSize: 11,
                               ))
